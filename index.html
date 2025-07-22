@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="NH Tech - Soluções Inteligentes em Tecnologia" />
+  <title>NH Tech - Tecnologia e Inovação</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar container">
+      <div class="navbar-brand">NH Tech</div>
+      <div class="navbar-links">
+        <a class="nav-link" href="#sobre">Sobre</a>
+        <a class="nav-link" href="#servicos">Serviços</a>
+        <a class="nav-link" href="#projetos">Projetos</a>
+        <a class="nav-link" href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h1 class="titulo">Soluções inteligentes<br />para o seu negócio</h1>
+    <p class="subtitulo">
+      Transformamos suas ideias em tecnologia eficiente.<br />
+      Inovação, performance e tecnologia de ponta para alavancar sua empresa.
+    </p>
+    <a href="#contato" class="btn">Solicitar Orçamento</a>
+  </section>
+
+  <section id="sobre" class="fade-section">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <p>
+        A NH Tech, fundada por Nicolas Henrique Scarin, é uma empresa que nasceu da paixão
+        pela tecnologia e inovação. Especializados em desenvolvimento de soluções tecnológicas
+        personalizadas, atuamos para modernizar processos e impulsionar negócios de diversos setores.
+      </p>
+      <p>
+        Nosso diferencial está na combinação entre expertise técnica e atendimento personalizado,
+        garantindo que cada projeto entregue atenda às necessidades específicas de cada cliente,
+        com qualidade, agilidade e transparência.
+      </p>
+    </div>
+  </section>
+
+<section id="servicos" class="slide-section bg-light">
+  <div class="container">
+    <h2>O que oferecemos</h2>
+    <ul>
+      <li><i class="fas fa-code"></i> Desenvolvimento Web</li>
+      <li><i class="fas fa-mobile-alt"></i> Aplicativos Mobile</li>
+      <li><i class="fas fa-cloud"></i> Sistemas em Nuvem</li>
+      <li><i class="fas fa-database"></i> Integração com Banco de Dados</li>
+      <li><i class="fas fa-shield-alt"></i> Segurança e Performance</li>
+      <li><i class="fas fa-bullhorn"></i> Assistência para Tráfego Pago de Empresas</li>
+      <li><i class="fas fa-chart-line"></i> Análise de Dados</li>
+      <li><i class="fas fa-cogs"></i> Sistemas Personalizados para Empresas</li>
+    </ul>
+  </div>
+</section>
+
+  <section id="projetos" class="fade-section">
+    <div class="container">
+      <h2>Projetos Recentes</h2>
+      <p>
+        Confira alguns dos projetos que temos orgulho de apresentar: desde sistemas gerenciais para pequenas empresas
+        até plataformas robustas para grandes corporações. Cada solução é criada para melhorar a experiência do usuário
+        e maximizar resultados.
+      </p>
+      <p>
+        Nosso portfólio destaca inovação, escalabilidade e design responsivo, adaptando-se às necessidades e desafios
+        de cada cliente.
+      </p>
+      <!-- Espaço para galeria de imagens ou cards de projetos -->
+    </div>
+  </section>
+
+  <section id="contato" class="slide-section bg-light">
+    <div class="container">
+      <h2>Fale Conosco</h2>
+      <p>
+        Quer transformar sua ideia em realidade? Estamos prontos para ouvir você!
+        Entre em contato e conte-nos mais sobre seu projeto.
+        Nossa equipe responderá rapidamente com as melhores soluções e orçamentos personalizados.
+      </p>
+      <form class="formulario" action="#" method="POST">
+        <input type="text" placeholder="Seu nome" name="nome" required />
+        <input type="email" placeholder="Seu e-mail" name="email" required />
+        <textarea placeholder="Sua mensagem" name="mensagem" rows="5" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 NH Tech - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('.fade-section', {
+      duration: 1000,
+      origin: 'bottom',
+      distance: '40px',
+      easing: 'ease-in-out',
+      reset: true,
+    });
+
+    ScrollReveal().reveal('.slide-section', {
+      duration: 1000,
+      origin: 'left',
+      distance: '60px',
+      easing: 'ease-in-out',
+      reset: true,
+    });
+  </script>
+</body>
+</html>

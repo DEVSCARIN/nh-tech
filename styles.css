@@ -1,0 +1,240 @@
+:root {
+  --cor-navbar-bg: #000000;       /* Fundo preto da navbar */
+  --cor-navbar-link: #ffffff;     /* Links em branco */
+  --cor-primaria: #ffffff;        /* Branco */
+  --cor-secundaria: #f0f0f0;     /* Cinza claro */
+  --cor-destaque: #111111;        /* Preto para textos principais */
+  --cor-cinza: #aaaaaa;           /* Cinza médio para hover */
+  --fonte-titulo: 'Playfair Display', serif;
+  --fonte-texto: 'Roboto', sans-serif;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo com fonte maior */
+body {
+  font-family: var(--fonte-texto);
+  background-color: var(--cor-secundaria);
+  color: var(--cor-destaque);
+  line-height: 1.8;
+  font-size: 18px; /* Fonte maior */
+  padding-top: 80px; /* Espaço para header fixo */
+}
+
+/* Container centralizado */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER E NAVBAR */
+header {
+  /* já existente */
+  background-color: var(--cor-navbar-bg);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+
+  /* linha fina branca como separador */
+  border-bottom: 3px solid rgba(255, 255, 255);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.navbar-brand {
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--cor-navbar-link);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--cor-navbar-link);
+  font-weight: 600;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--cor-cinza);
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 8rem 1rem 6rem;
+  background-color: var(--cor-destaque);
+  color: var(--cor-primaria);
+}
+
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-size: 3.6rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.subtitulo {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-destaque);
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--cor-cinza);
+  color: var(--cor-primaria);
+}
+
+/* SECTIONS */
+section {
+  padding: 6rem 0;
+}
+
+.bg-light {
+  background-color: var(--cor-primaria);
+}
+
+/* TITULOS DE SEÇÃO */
+h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--cor-destaque);
+}
+
+/* LISTAS DE SERVIÇOS */
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 2.5rem;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  color: var(--cor-destaque);
+}
+
+li i {
+  color: var(--cor-navbar-bg); /* Ícones pretos para contraste */
+  font-size: 1.6rem;
+}
+
+/* FORMULÁRIO DE CONTATO */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 1.2rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: var(--fonte-texto);
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--cor-destaque);
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--cor-navbar-bg);
+  color: var(--cor-primaria);
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--cor-cinza);
+  color: var(--cor-navbar-bg);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--cor-navbar-bg);
+  color: var(--cor-primaria);
+  text-align: center;
+  padding: 1.8rem 0;
+  font-size: 1rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .titulo {
+    font-size: 2.4rem;
+  }
+  .subtitulo {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  .nav-link {
+    font-size: 1.1rem;
+  }
+  li {
+    font-size: 1.1rem;
+  }
+  button, input, textarea {
+    font-size: 1rem;
+  }
+}
